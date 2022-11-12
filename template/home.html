@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Detection</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+</head>
+<body>
+    <h1
+    title="
+    A cancer that forms in the cells of the breasts. Breast cancer can occur in women and rarely in men. Symptoms of breast cancer include a lump in the breast, bloody discharge from the nipple and changes in the shape or texture of the nipple or breast. Its treatment depends on the stage of cancer. It may consist of chemotherapy, radiation, hormone therapy and surgery. A cancer can be detected but the type in early age is very difficult even for experienced doctors which can cause later treatment which might not be successfull. But the issue can be resolved or can be reduced by detecting using machine learning as it is trained on many data, which can be helpful for the cancer patients and can be treat.
+    ">Breast Cancer Prediction</h1>
+    <form action= "{{url_for('predict')}}" method =  "POST" enctype="multipart/form-data">
+        <h3>Input the given fields</h3>
+        <input name="rmean" type="number" pattern="[0-9]{1}" title="If any data is missing enter 0" placeholder="Enter Radius Mean" id="radius-mean" > <br> <br>
+        <input name="pmean" type="number" pattern="[0-9]{1}" title="If any data is missing enter 0" placeholder="Enter Perimeter Mean" id="perimeter-mean"  > <br> <br>
+        <input name="amean" type="number" pattern="[0-9]{1}" title="If any data is missing enter 0" placeholder="Enter Area Mean" id="area-mean" > <br> <br>
+        <input name="cmean"type="number" pattern="[0-9]{1}" title="If any data is missing enter 0" placeholder="Enter Concave Point Mean" id="concave-point-mean"  > <br> <br>
+        <input name="wmean" type="number" pattern="[0-9]{1}" title="If any data is missing enter 0" placeholder="Enter Worst Radius Mean" id="worst-radius-mean" > <br> <br>
+        <input name="pwmean"type="number" pattern="[0-9]{1}" title="If any data is missing enter 0" placeholder="Enter Perimeter Worst Mean" id="perimeter-worst-mean" > <br> <br>
+        <input name="awmean" type="number" pattern="[0-9]{1}" title="If any data is missing enter 0" placeholder="Enter Area Worst Mean" id="area-worst-mean"  ><br> <br>
+        <input class="my-cta-button btn btn-secondary btn-lg" type="submit" value="Predict">
+        <p id="result">{{pred}}</p>
+       
+    </form>
+    <style>
+
+        body {
+            background-color: #dde9e4;
+        }
+        
+        h1 {
+            padding-top: 8px;
+            text-align: center;
+        }
+        
+        form {
+            height: 70%;
+            width: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+            background-color: #dee2fc;
+            display: block;
+            transform: translate(50%, 75px);
+            text-align: center;
+        }
+        
+        form input {
+            width: 255px;
+            height: 25px;
+            text-align: center;
+        }
+        
+        form p {
+            font-size: 25px;
+        }
+     
+        #btn {
+            width: 77px;
+            height: 28px;
+            background-color: #4a4a4a;
+            color: #ffffff;
+            font-size: medium;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        }
+        
+    </style>
+</body>
+</html>
