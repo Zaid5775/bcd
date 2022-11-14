@@ -67,10 +67,10 @@ def predict():
         
         if LR.predict (lst)[0] == 0:
             #cancer = "Benign tumors are those that stay in their primary location without invading other sites of the body. They do not spread to local structures or to distant parts of the body. Benign tumors tend to grow slowly and have distinct borders/n Benign tumors are not usually problematic. However, they can become large and compress structures nearby, causing pain or other medical complications. For example, a large benign lung tumor could compress the trachea (windpipe) and cause difficulty in breathing. This would warrant urgent surgical removal. Benign tumors are unlikely to recur once removed. Common examples of benign tumors are fibroids in the uterus and lipomas in the skin."
-            return ('Benign Cancer detected !!!/n', cancer)
+            return ('Benign Cancer detected !!')
         else:
             #cancer = "Benign tumors are those that stay in their primary location without invading other sites of the body. They do not spread to local structures or to distant parts of the body. Benign tumors tend to grow slowly and have distinct borders/n Benign tumors are not usually problematic. However, they can become large and compress structures nearby, causing pain or other medical complications. For example, a large benign lung tumor could compress the trachea (windpipe) and cause difficulty in breathing. This would warrant urgent surgical removal. Benign tumors are unlikely to recur once removed. Common examples of benign tumors are fibroids in the uterus and lipomas in the skin."
-            return ('Malignant Cancer detected !!! /n' , cancer)
+            return ('Malignant Cancer detected !!')
 
     patient_detail = np.array ([], dtype='int64')
     
@@ -87,11 +87,7 @@ def predict():
                
 
     
-@app.route('/clear') 
-def clear():
-    if(render_template('predict')):
-        render_template('home.html')
-    
+
            
 
 if __name__ == '__main__':
